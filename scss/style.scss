@@ -1,0 +1,238 @@
+
+body {
+    div{
+        header{
+            display: grid;
+            grid-template-rows: auto auto;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            "logo redes"
+            "nav nav";
+            background-image: url(../images/header.png);
+            padding: 10px;
+            
+            #logo{
+                grid-area: logo;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: flex-start;
+                align-items: center;
+                padding: 1rem;
+                img{
+                    border-radius: 50%;
+                }
+                h1{
+                    font-style: italic;
+                    font-weight: normal;
+                    font-size: 2rem;
+                    font-family: Impact, serif;
+                    color: #0f0707;
+                }
+            }
+            #redes{
+                grid-area: redes;
+                padding: 1rem;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                align-items: center;                
+                a{
+                    img{
+                        border-radius: 50%;
+                    }
+                }
+            }
+            nav{
+                grid-area: nav;
+                align-items: center;
+                ul{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    li{
+                        list-style-type: none ;
+                        text-decoration:none;
+                        font-style: italic;
+                        font-weight: bold;
+                        font-size: 1.3rem;
+                        font-family: Arial, Helvetica, sans-serif;
+                        padding: 2px;
+                        a:link, a:visited{
+                            list-style-type: none ;
+                            text-decoration: none ;
+                            color: rgb(255, 255, 255);
+                        }
+                        a:hover{
+                            list-style-type: none ;
+                            text-decoration: none ;
+                            color: rgb(238, 22, 22);
+                        } 
+                        a:active{
+                            list-style-type: none ;
+                            text-decoration: none ;
+                            color: rgb(17, 20, 209);
+                        }
+                    }
+                }
+            }    
+        }
+        main{
+            background-image: url(../images/header.png);
+            border-top: solid 2px black;
+            div{
+                #mainImagenes{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 20px;
+                    img{
+                        width: 15rem;
+                        height: 12rem;
+                    }
+
+                }
+            }
+            div{
+                #titulo{
+                        text-align: center;
+                        font-family: 'Water Brush', cursive;
+                        font-style: italic;
+                        font-weight: normal;
+                        font-size: 2rem;
+                        color: #0f0707;
+
+                    }
+                div{
+                    p{
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 1rem;
+                        font-family: Arial, Helvetica, sans-serif;
+                        color: #0f0f0f;
+                        text-align: justify;
+                        padding: 2px 4rem;
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+                    #Intro{
+                        border: solid 2px rgb(7, 7, 7);
+                        background-color: rgb(141, 124, 124);
+                        height: 200px;
+                        overflow: auto;
+                        margin: 20px 10px 20px 10px;
+                    }
+                    
+                }
+                div{
+                    #IrEncabezado{text-decoration:none;
+                        font-style: italic;
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                        font-family: Arial, Helvetica, sans-serif;
+                        text-align: center;
+                        margin: 1.5rem;
+                    }
+                    #IrEncabezado:link, #IrEncabezado:visited {
+                        list-style-type: none ;
+                        text-decoration: none ;
+                        color: rgb(5, 5, 5); 
+                    }
+                }
+            }
+        }
+        footer{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1rem;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #0f0f0f;
+            text-align: justify;
+            padding: 2px 4rem;
+            margin: 0;
+            background-image: url(../images/header.png);
+            border-top: solid 2px black;
+            align-content: stretch;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-areas: 
+            "fLogo fUbicacion fRedes";
+            
+            #bloqueLogo{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: flex-start;
+                align-items: center;
+                grid-area: fLogo;
+                padding: 1rem;
+                img{
+                    border-radius: 50%; 
+                }
+                p{
+                    font-style: italic;
+                    font-weight: normal;
+                    font-size: 2rem;
+                    font-family: Impact, serif;
+                    color: #0f0707;
+                }
+            }
+            
+            #bloqueUbicacion{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-items: center;
+                align-items: center;
+                grid-area: fUbicacion;
+                padding: 1rem;
+            }
+            
+            #bloqueRedes {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center; 
+                grid-area: fRedes;
+                padding: 1rem;
+                a{
+                    img{
+                        border-radius: 50%;
+                    }
+                }  
+            }
+
+            
+            
+
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

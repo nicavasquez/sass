@@ -1,693 +1,191 @@
 
-*{
-    margin: 0;
-    padding: 0;
+body div header {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "logo redes" "nav nav";
+  background-image: url(../images/header.png);
+  padding: 10px;
+}
+body div header #logo {
+  grid-area: logo;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+}
+body div header #logo img {
+  border-radius: 50%;
+}
+body div header #logo h1 {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 2rem;
+  font-family: Impact, serif;
+  color: #0f0707;
+}
+body div header #redes {
+  grid-area: redes;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+body div header #redes a img {
+  border-radius: 50%;
+}
+body div header nav {
+  grid-area: nav;
+  align-items: center;
+}
+body div header nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body div header nav ul li {
+  list-style-type: none;
+  text-decoration: none;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 2px;
+}
+body div header nav ul li a:link, body div header nav ul li a:visited {
+  list-style-type: none;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+body div header nav ul li a:hover {
+  list-style-type: none;
+  text-decoration: none;
+  color: rgb(238, 22, 22);
+}
+body div header nav ul li a:active {
+  list-style-type: none;
+  text-decoration: none;
+  color: rgb(17, 20, 209);
+}
+body div main {
+  background-image: url(../images/header.png);
+  border-top: solid 2px black;
+}
+body div main div #mainImagenes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+body div main div #mainImagenes img {
+  width: 15rem;
+  height: 12rem;
+}
+body div main div #titulo {
+  text-align: center;
+  font-family: "Water Brush", cursive;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 2rem;
+  color: #0f0707;
+}
+body div main div div p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0f0f0f;
+  text-align: justify;
+  padding: 2px 4rem;
+}
+body div main div div p span {
+  font-weight: bold;
+}
+body div main div div #Intro {
+  border: solid 2px rgb(7, 7, 7);
+  background-color: rgb(141, 124, 124);
+  height: 200px;
+  overflow: auto;
+  margin: 20px 10px 20px 10px;
+}
+body div main div div #IrEncabezado {
+  text-decoration: none;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 1.5rem;
+}
+body div main div div #IrEncabezado:link, body div main div div #IrEncabezado:visited {
+  list-style-type: none;
+  text-decoration: none;
+  color: rgb(5, 5, 5);
+}
+body div footer {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0f0f0f;
+  text-align: justify;
+  padding: 2px 4rem;
+  margin: 0;
+  background-image: url(../images/header.png);
+  border-top: solid 2px black;
+  align-content: stretch;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "fLogo fUbicacion fRedes";
+}
+body div footer #bloqueLogo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: center;
+  grid-area: fLogo;
+  padding: 1rem;
+}
+body div footer #bloqueLogo img {
+  border-radius: 50%;
+}
+body div footer #bloqueLogo p {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 2rem;
+  font-family: Impact, serif;
+  color: #0f0707;
+}
+body div footer #bloqueUbicacion {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-items: center;
+  grid-area: fUbicacion;
+  padding: 1rem;
+}
+body div footer #bloqueRedes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  grid-area: fRedes;
+  padding: 1rem;
+}
+body div footer #bloqueRedes a img {
+  border-radius: 50%;
 }
 
-.headerBordesRedondeados {
-    border-radius: 50%; 
-}/*redondeo las imagenes de iconos de redes*/
-
-.letraTexto {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #0f0f0f;
-    text-align: justify;
-    padding: 2px 4rem;
-}
-
-.nombreEmpresa {
-    font-style: italic;
-    font-weight: normal;
-    font-size: 2rem;
-    font-family: Impact, serif;
-    color: #0f0707;   
-}/* establezo propiedades para el
- nombre de la empresa, uso esta clase en
- header y footer  */
-
- .titulo{
-    text-align: center;
-    font-family: 'Water Brush', cursive;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 2rem;
-    color: #0f0707;   
-}/*uso esa fuente de familia para practicar, en un futuro elegire otra*/
-
-.navegador {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-ul li {
-    list-style-type: none ;
-    text-decoration:none;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 1.3rem;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 2px;
-}/*para los elementos de la barra navegadora, sin viñetas
-en linea, sin subrayado, propiedades de estilo*/
-
-header li a:link, header li a:visited {
-    list-style-type: none ;
-    text-decoration: none ;
-    color: rgb(255, 255, 255); 
-}/*establezco como quiero que se vea el link en distintas situaciones*/
-
-header li a:hover {
-    list-style-type: none ;
-    text-decoration: none ;
-    color: rgb(238, 22, 22); 
-}/*establezco como quiero que se vea el link en distintas situaciones*/
-
-header li a:active {
-    list-style-type: none ;
-    text-decoration: none ;
-    color: rgb(17, 20, 209); 
-}/*establezco como quiero que se vea el link en distintas situaciones*/
-
-
-#Intro {
-    border: solid 2px rgb(7, 7, 7);
-    background-color: rgb(141, 124, 124);
-    height: 200px;
-    overflow: auto;
-    margin: 20px 10px 20px 10px;
-}/*mantengo esta caja para seguir practicando*/
-
-span {
-    font-weight: bold;
-}
-
-#IrEncabezado {
-    text-decoration:none;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 1.2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    margin: 1.5rem; 
-}
-
-header {
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "logo redes"
-    "nav nav";
-    background-image: url(../images/header.png);
-    padding: 10px;
-}
-
-#logo{
-    grid-area: logo;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    align-items: center;
-    padding: 1rem;
-}
-
-#redes{
-    grid-area: redes;
-    padding: 1rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: center; 
-}
-
-nav {
-    grid-area: nav;
-    align-items: center;
-}
-
-main {
-    background-image: url(../images/header.png);
-    border-top: solid 2px black;
-}
-
-#mainImagenes{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 20px;
-}/*no me convence, por ahi en el futuro pongo las imagenes a los costados
-y el nombre de la empresa al medio*/
-
-.tamanoImagen {
-    width: 15rem;
-    height: 12rem;
-}
-
-#IrEncabezado {
-    text-decoration:none;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 1.2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center; 
-}
-
-#IrEncabezado:link, #IrEncabezado:visited {
-    list-style-type: none ;
-    text-decoration: none ;
-    color: rgb(5, 5, 5); 
-}
-
-footer {
-    margin: 0;
-    background-image: url(../images/header.png);
-    border-top: solid 2px black;
-    align-content: stretch;
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: 
-    "fLogo fUbicacion fRedes";    
-}
-
-/*cree id para las cajas del footer para jugar con sus propiedades
-de manera diferenciada*/
-#bloqueLogo{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    align-items: center;
-    grid-area: fLogo;
-    padding: 1rem;
-}
-
-#bloqueUbicacion{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-items: center;
-    align-items: center;
-    grid-area: fUbicacion;
-    padding: 1rem;
-}
-
-#bloqueRedes {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center; 
-    grid-area: fRedes;
-    padding: 1rem;  
-}
-
-#nosotros_main_div{
-    display:flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.servicios {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 0;
-    
-}
-
-.servicios div {
-    border: solid 2px rgb(7, 7, 7); 
-    overflow: auto;
-    padding: 1.5rem;
-    text-align: center; 
-    margin: 1.5rem;
-} 
-
-.novedades {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin: 0;
-    
-}
-
-.novedades div {
-    border: solid 2px rgb(7, 7, 7); 
-    overflow: auto;
-    padding: 1.5rem;
-    text-align: center; 
-    margin: 1.5rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.contacto {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin: 0;
-}
-
-.contacto div {
-    border: solid 2px rgb(7, 7, 7); 
-    overflow: auto;
-    padding: 1.5rem;
-    text-align: center; 
-    margin: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#datos {
-    background-image: url(../images/header.png);
-    border-top: solid 2px black;
-    display: grid;
-    grid-template-rows: repeat(3, auto);
-    grid-template-columns: repeat(2, auto);
-    grid-template-areas: 
-    "ubic ubic"
-    "em tel"
-    "hora hora";    
-}
-
-/*cree id para las cajas del footer para jugar con sus propiedades
-de manera diferenciada*/
-#ubicacion{
-    grid-area: ubic;
-    padding: 1rem;
-    overflow: auto;
-    padding: 1.5rem;
-    text-align: center; 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#email{
-    grid-area: em;
-    padding: 1rem;
-    overflow: auto;
-    padding: 1.5rem;
-    text-align: center; 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#telefono{
-    grid-area: tel;
-    padding: 1rem;
-    overflow: auto;
-    padding: 1.5rem;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#horarios{
-    grid-area: hora;
-    padding: 1rem;
-    overflow: auto;
-    padding: 1.5rem;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-@media screen and (max-width:768px){
-
-    header {
-        display: grid;
-        grid-template-rows: 0.25fr 1fr 0.5fr;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "nav"
-        "logo"
-        "redes";
-        background-image: url(../images/header.png);
-        padding: 0.5rem;
-    }
-    
-    #logo{
-        grid-area: logo;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
-        align-items: center;
-        padding: 1rem;
-    }
-    
-    #redes{
-        grid-area: redes;
-        padding: 1rem;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center; 
-    }
-    
-    nav {
-        grid-area: nav;
-        align-items: center;
-    }
-
-    main {
-        background-image: url(../images/header.png);
-        border-top: dashed 2px black;
-    }
-
-    .tamanoImagen2 {
-        width: 15rem;
-        height: 12rem;
-    }
-
-    .remove {
-        display:none;
-    }
-            
-    #IrEncabezado {
-        display:none;
-    }
-
-    .letraTexto {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 1rem;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #0f0f0f;
-        text-align: justify;
-        padding: 1rem 4rem;
-    }
-
-    .titulo{
-        text-align: center;
-        font-family: 'Georgia', cursive;
-        font-style: italic;
-        font-weight: normal;
-        font-size: 2rem;
-        color: #0f0707;
-        padding: 1rem 0rem;    
-    }
-
-    footer {
-        margin: 0;
-        background-image: url(../images/header.png);
-        border-top: solid 2px black;
-        align-content: stretch;
-        display: grid;
-        grid-template-rows: auto;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        "fUbicacion fRedes";    
-    }
-    
-    #bloqueLogo{
-        display: none;
-    }
-    
-    #bloqueUbicacion{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-items: center;
-        align-items: center;
-        grid-area: fUbicacion;
-        padding: 1rem;
-    }
-    
-    #bloqueRedes {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center; 
-        grid-area: fRedes;
-        padding: 1rem;  
-    }
-
-    .novedades div {
-        border: solid 2px rgb(7, 7, 7); 
-        overflow: auto;
-        padding: 1.5rem;
-        text-align: center; 
-        margin: 1.5rem;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    #datos {
-        background-image: url(../images/header.png);
-        border-top: solid 2px black;
-        display: grid;
-        grid-template-rows: repeat(3, auto);
-        grid-template-columns: repeat(2, auto);
-        grid-template-areas: 
-        "ubic ubic"
-        "em tel"
-        "hora hora";    
-    }
-    
-    /*cree id para las cajas del footer para jugar con sus propiedades
-    de manera diferenciada*/
-    #ubicacion{
-        grid-area: ubic;
-        padding: 1rem;
-        overflow: scroll;
-        padding: 1.5rem;
-        text-align: center; 
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    #email{
-        grid-area: em;
-        padding: 1rem;
-        overflow: scroll;
-        padding: 1.5rem;
-        text-align: center; 
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    #telefono{
-        grid-area: tel;
-        padding: 1rem;
-        overflow: scroll;
-        padding: 1.5rem;
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    #horarios{
-        grid-area: hora;
-        padding: 1rem;
-        overflow: scroll;
-        padding: 1.5rem;
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-}
-
-@media screen and (max-width:480px){
-
-    header {
-        display: grid;
-        grid-template-rows: 0.25fr 1fr;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "nav"
-        "logo";
-        background-image: url(../images/header.png);
-        padding: 0.5rem;
-    }
-    
-    #logo{
-        grid-area: logo;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
-        align-items: center;
-        padding: 1rem;
-    }
-    
-    #redes{
-        display: none;
-    }
-    
-    nav {
-        grid-area: nav;
-        align-items: center;
-    }
-
-
-    .remove2 {
-        display:none;
-    }
-            
-    .letraTexto {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 1rem;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #ffffff;
-        text-align: justify;
-        padding: 1rem 4rem;
-    }
-
-
-    footer {
-        margin: 0;
-        background-image: url(../images/header.png);
-        border-top: solid 2px black;
-        align-content: stretch;
-        display: grid;
-        grid-template-rows: 1fr 2fr;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "fRedes" 
-        "fUbicacion";    
-    }
-    
-    
-    #bloqueUbicacion{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-items: center;
-        align-items: center;
-        grid-area: fUbicacion;
-        padding: 1rem;
-    }
-    
-    #bloqueRedes {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center; 
-        grid-area: fRedes;
-        padding: 1rem;  
-    }
-
-    
-    #datos {
-        background-image: url(../images/header.png);
-        border-top: dashed 2px black;
-        display: grid;
-        grid-template-rows: repeat(3, auto);
-        grid-template-columns: repeat(1, auto);
-        grid-template-areas: 
-        "em"
-        "tel"
-        "hora";    
-    }
-    
-    /*cree id para las cajas del footer para jugar con sus propiedades
-    de manera diferenciada*/
-    #ubicacion{ 
-        display: none;
-    }
-    
-    #email{
-        grid-area: em;
-        padding: 1rem;
-        overflow: auto;
-        padding: 1.5rem;
-        text-align: center; 
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    #telefono{
-        grid-area: tel;
-        padding: 1rem;
-        overflow: auto;
-        padding: 1.5rem;
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    #horarios{
-        grid-area: hora;
-        padding: 1rem;
-        overflow: auto;
-        padding: 1.5rem;
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-}
-
-
-
-
-
-
-
-
-
+/*# sourceMappingURL=style.css.map */
