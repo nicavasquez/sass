@@ -1,0 +1,60 @@
+main{
+    #nosotros_main_div{
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        div{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1rem;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #0f0f0f;
+            text-align: justify;
+            padding: 2px 4rem;
+            align-items: center;
+            
+            h2{
+                text-align: center;
+                font-family: 'Water Brush', cursive;
+                font-style: italic;
+                font-weight: normal;
+                font-size: 2rem;
+                color: #0f0707; 
+
+            }
+            p{
+                span{
+                    font-weight: bold;
+
+                }
+            }
+        }
+        div{
+            img{
+                width: 15rem;
+                height: 12rem;
+
+            }
+        }
+        div{
+            #IrEncabezado{
+                text-decoration:none;
+                font-style: italic;
+                font-weight: bold;
+                font-size: 1.2rem;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                margin: 1.5rem;
+        }
+            #IrEncabezado:link, #IrEncabezado:visited {
+                list-style-type: none ;
+                text-decoration: none ;
+                color: rgb(5, 5, 5); 
+            }
+
+        }
+        
+    }
+}

@@ -1,0 +1,82 @@
+body {
+    div{
+        header{
+            display: grid;
+            grid-template-rows: auto auto;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            "logo redes"
+            "nav nav";
+            background-image: url(../images/header.png);
+            padding: 10px;
+            
+            #logo{
+                grid-area: logo;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: flex-start;
+                align-items: center;
+                padding: 1rem;
+                img{
+                    border-radius: 50%;
+                }
+                h1{
+                    font-style: italic;
+                    font-weight: normal;
+                    font-size: 2rem;
+                    font-family: Impact, serif;
+                    color: #0f0707;
+                }
+            }
+            #redes{
+                grid-area: redes;
+                padding: 1rem;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                align-items: center;                
+                a{
+                    img{
+                        border-radius: 50%;
+                    }
+                }
+            }
+            nav{
+                grid-area: nav;
+                align-items: center;
+                ul{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    li{
+                        list-style-type: none ;
+                        text-decoration:none;
+                        font-style: italic;
+                        font-weight: bold;
+                        font-size: 1.3rem;
+                        font-family: Arial, Helvetica, sans-serif;
+                        padding: 2px;
+                        a:link, a:visited{
+                            list-style-type: none ;
+                            text-decoration: none ;
+                            color: rgb(255, 255, 255);
+                        }
+                        a:hover{
+                            list-style-type: none ;
+                            text-decoration: none ;
+                            color: rgb(238, 22, 22);
+                        } 
+                        a:active{
+                            list-style-type: none ;
+                            text-decoration: none ;
+                            color: rgb(17, 20, 209);
+                        }
+                    }
+                }
+            }    
+        }
+    }}

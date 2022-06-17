@@ -1,0 +1,63 @@
+footer{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0f0f0f;
+    text-align: justify;
+    padding: 2px 4rem;
+    margin: 0;
+    background-image: url(../images/header.png);
+    border-top: solid 2px black;
+    align-content: stretch;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "fLogo fUbicacion fRedes";
+    
+    #bloqueLogo{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        align-items: center;
+        grid-area: fLogo;
+        padding: 1rem;
+        img{
+            border-radius: 50%; 
+        }
+        p{
+            font-style: italic;
+            font-weight: normal;
+            font-size: 2rem;
+            font-family: Impact, serif;
+            color: #0f0707;
+        }
+    }
+    
+    #bloqueUbicacion{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-items: center;
+        align-items: center;
+        grid-area: fUbicacion;
+        padding: 1rem;
+    }
+    
+    #bloqueRedes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center; 
+        grid-area: fRedes;
+        padding: 1rem;
+        a{
+            img{
+                border-radius: 50%;
+            }
+        }  
+    }
+}
